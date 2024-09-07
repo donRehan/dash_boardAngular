@@ -1,18 +1,9 @@
-/* Create variables for sizes and colors to be used and changed easily */
-@import url('https://fonts.cdnfonts.com/css/neo-sans-arabic');
-
-:root {
-  --lighttext-color: #ABAAB1;
-  --accent-color: #8A74F9;
-  --default-background-color: #FFFFFF;
-  --font-family-arabic: 'Neo Sans Arabic';
-  --font-family-english: Inter;
-}
 body {
 	display: flex;
 	flex-direction: column;
 	/* Remove this part */
 	gap: 10px;
+  background-color: var(--background-color-custom);
 }
 body:lang(ar) {
     font-family: var(--font-family-arabic);
@@ -25,7 +16,6 @@ body:lang(en) {
 div {
 	display: flex;
 	flex-direction: column;
-	background: yellowgreen;
 	border-color: black;
 	text-align: center;
 	justify-content: center;
@@ -35,20 +25,33 @@ div {
 .dashboard {
 	display: flex;
 	flex-direction: row;
-	background-color: grey;
 	min-height: 264px;
 	gap: 24px;
 	flex-wrap: wrap;
 }
 
 .purple_div {
-	background: purple;
 	flex: 1;
 	min-width: 200px;
 }
 
 /* 261 should look more professional ?? */
 .chart {
+  width: 100%;
+	min-width: 270px;
+	min-height: 400px;
+  background-color: var(--chart-background-color);
+}
+
+.chart-container {
+  overflow: hidden;
+	display: flex;
 	flex: 2;
 	min-width: 270px;
+	min-height: 400px;
+  background-color: var(--chart-background-color);
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 0.81px;
+  border-color: #EBEBEB;
 }

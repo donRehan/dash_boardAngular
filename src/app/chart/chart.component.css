@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.daterange {
+  font-size: 13px;
+  color: var(--lighttext-color);
+}

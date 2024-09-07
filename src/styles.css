@@ -1,0 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/neo-sans-arabic');
+
+:root {
+  --lighttext-color: #ABAAB1;
+  --accent-color: #8A74F9;
+  --background-color-custom: #f2f5f6;
+  --chart-background-color: #FFF;
+  --font-family-arabic: 'Neo Sans Arabic';
+  --font-family-english: Inter;
+}
