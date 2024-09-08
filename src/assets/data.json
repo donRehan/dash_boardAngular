@@ -1,38 +1,74 @@
 [
-  {
-    "id": 1000,
-    "name": "James Butt",
-    "country": {
-      "name": "Algeria",
-      "code": "dz"
+    {
+      "ticket": {
+        "name": "pdf.45 رقم تذكرة",
+        "file_size": "9mb",
+        "file_type": "PDF"
+      },
+      "purchase_count": "مرة واحدة",
+      "people_count": 1,
+      "details": "سينما مصر, مول العرب, برج العرب, سرايا القبة...",
+      "price": "$40",
+      "ticket_number": "C-101",
+      "user": {
+        "name": "أحمد محمود",
+        "phone": "0123456789",
+        "avatar": "<svg width=\"31\" height=\"31\" viewBox=\"0 0 31 31\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0.329834\" y=\"0.685669\" width=\"29.8768\" height=\"29.8768\" rx=\"14.9384\" fill=\"#038CB7\"/></svg>",
+        "initials": "Ma"
+      }
     },
-    "company": "Benton, John B Jr",
-    "date": "2015-09-13",
-    "status": "unqualified",
-    "verified": true,
-    "activity": 17,
-    "representative": {
-      "name": "Ioni Bowcher",
-      "image": "ionibowcher.png"
+    {
+      "ticket": {
+        "name": "pdf.45 رقم تذكرة",
+        "file_size": "9mb",
+        "file_type": "PDF"
+      },
+      "purchase_count": "مرة واحدة",
+      "people_count": 1,
+      "details": "سينما مصر, مول العرب, برج العرب, سرايا القبة...",
+      "price": "$30",
+      "ticket_number": "C-102",
+      "user": {
+        "name": "محمد العربي",
+        "phone": "0123456789",
+        "avatar": "path_to_avatar_2.png",
+        "initials": "Ma"
+      }
     },
-    "balance": 70663
-  },
-  {
-    "id": 1001,
-    "name": "John Doe",
-    "country": {
-      "name": "USA",
-      "code": "us"
+    {
+      "ticket": {
+        "name": "pdf.45 رقم تذكرة",
+        "file_size": "9mb",
+        "file_type": "PDF"
+      },
+      "purchase_count": "مرة واحدة",
+      "people_count": 1,
+      "details": "سينما مصر, مول العرب, برج العرب, سرايا القبة...",
+      "price": "$45",
+      "ticket_number": "C-102",
+      "user": {
+        "name": "محمد العربي",
+        "phone": "0123456789",
+        "avatar": "path_to_avatar_2.png",
+        "initials": "Ma"
+      }
     },
-    "company": "Doe Enterprises",
-    "date": "2021-10-10",
-    "status": "qualified",
-    "verified": false,
-    "activity": 25,
-    "representative": {
-      "name": "Mary Smith",
-      "image": "marysmith.png"
-    },
-    "balance": 12345
-  }
+    {
+      "ticket": {
+        "name": "pdf.45 رقم تذكرة",
+        "file_size": "9mb",
+        "file_type": "PDF"
+      },
+      "purchase_count": "مرة واحدة",
+      "people_count": 1,
+      "details": "سينما مصر, مول العرب, برج العرب, سرايا القبة...",
+      "price": "$54",
+      "ticket_number": "C-103",
+      "user": {
+        "name": "محمد العربي",
+        "phone": "0123456789",
+        "avatar": "path_to_avatar_2.png",
+        "initials": "Ma"
+      }
+    }
 ]

@@ -3,29 +3,78 @@
     [paginator]="true"
     [rows]="5"
     [showCurrentPageReport]="true"
-    [tableStyle]="{ 'min-width': '50rem' }"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-    [rowsPerPageOptions]="[10, 25, 50]"
+    [rowsPerPageOptions]="[5, 10, 20]"
+    responsiveLayout="scroll"
+    class="rtl-table"
 >
+    <!-- Table Header -->
     <ng-template pTemplate="header">
         <tr>
-            <th style="width:25%">Name</th>
-            <th style="width:25%">Country</th>
-            <th style="width:25%">Company</th>
-            <th style="width:25%">Representative</th>
+            <th>التذكرة</th>
+            <th>عدد مرات الشراء</th>
+            <th>عدد الأشخاص</th>
+            <th>التفاصيل</th>
+            <th pSortableColumn="price"><p-sortIcon field="price"></p-sortIcon> قيمة التذكرة</th>
+            <th>رقم التذكرة</th>
+            <th>المستخدم</th>
+            <th>#</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-data>
+
+    <!-- Table Body -->
+    <ng-template pTemplate="body" let-data let-rowIndex="rowIndex">
         <tr>
-            <td>{{data.name}}</td>
-            <td>{{data.country.name}}</td>
-            <td>{{data.company}}</td>
-            <td>{{data.representative.name}}</td>
+            <!-- Ticket Info -->
+            <td class="ticketInfo">
+                <i class="pi pi-download"><svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.83325 5.25799L6.33325 7.75799L3.83325 5.25799M6.33325 7.75799V1.09132M11.3333 9.42466C8.09159 10.508 4.57492 10.508 1.33325 9.42466" stroke="#8A74F9" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></i> {{data.ticket.name}}
+                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6917 4.39775C11.9355 4.39775 12.1292 4.19775 12.1292 3.94775V3.39775C12.1292 0.941504 11.3792 0.197754 8.92922 0.197754H4.99172H3.40422C0.954224 0.197754 0.204224 0.947754 0.204224 3.39775V3.6665C0.204224 3.9165 0.397974 4.11025 0.641724 4.11025C1.16672 4.11025 1.58547 4.53525 1.58547 5.054C1.58547 5.57275 1.16672 6.004 0.641724 6.004C0.397974 6.004 0.204224 6.19775 0.204224 6.44775V6.7165C0.204224 9.17275 0.954224 9.9165 3.40422 9.9165H4.98547H8.92297C11.373 9.9165 12.123 9.1665 12.123 6.7165C12.123 6.47275 11.9292 6.27275 11.6855 6.27275C11.1605 6.27275 10.7417 5.854 10.7417 5.33525C10.748 4.8165 11.1667 4.39775 11.6917 4.39775ZM5.42922 7.954C5.42922 8.19775 5.22922 8.39775 4.98547 8.39775C4.74172 8.39775 4.54172 8.19775 4.54172 7.954V6.279C4.54172 6.03525 4.74172 5.83525 4.98547 5.83525C5.22922 5.83525 5.42922 6.03525 5.42922 6.279V7.954ZM5.42922 3.83525C5.42922 4.079 5.22922 4.279 4.98547 4.279C4.74172 4.279 4.54172 4.079 4.54172 3.83525V2.16025C4.54172 1.9165 4.74172 1.7165 4.98547 1.7165C5.22922 1.7165 5.42922 1.9165 5.42922 2.16025V3.83525Z" fill="#8A74F9"/>
+                </svg>
+                <br>
+                <span class="file-type">{{data.ticket.file_size}} . {{data.ticket.file_type}}</span>
+            </td>
+
+            <!-- Purchase Count -->
+            <td>{{data.purchase_count}}</td>
+
+            <!-- People Count -->
+            <td>{{data.people_count}}</td>
+
+            <!-- Ticket Details -->
+            <td>
+                {{data.details}}
+                <i class="pi pi-info-circle" pTooltip="Contains more info"></i>
+            </td>
+
+            <!-- Price -->
+            <td>{{data.price}}</td>
+
+            <!-- Ticket Number -->
+            <td>{{data.ticket_number}}</td>
+
+            <!-- User Info -->
+            <td>
+                <div>
+                    {{data.user.name}} <br>
+                    <span class="phoneNumber">{{data.user.phone}}</span>
+                </div>
+                <img [src]="data.user.avatar" alt="{{data.user.name}}" class="avatar">
+            </td>
+
+            <!-- Row Number -->
+            <td class="rowNumber">{{rowIndex + 1}}</td>
         </tr>
     </ng-template>
+
+    <!-- Paginator Left Template -->
     <ng-template pTemplate="paginatorleft">
         <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
     </ng-template>
+
+    <!-- Paginator Right Template -->
     <ng-template pTemplate="paginatorright">
         <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
     </ng-template>

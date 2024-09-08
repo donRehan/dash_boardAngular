@@ -1,2 +1,6 @@
-[_] Add the padding right and left (in the end)
-[_] Double check the color
+[_] Loading the images should be easy , just download them and access them
+    from their path in the json file
+[_] Table add a box with color around the right most svg icon
+[_] Add the padding right and left
+[_] Double check the color for the chart
+[_] Hide the left numbers
