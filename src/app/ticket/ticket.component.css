@@ -19,6 +19,7 @@
 
 .top-section {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
@@ -74,7 +75,7 @@
   background-color: #e8e5f1;
   border: none;
   padding: 5px;
-  width: 100%;
+  width: 300px;
   color: black;
   margin-top: 5px;
   font-size: 14px;
@@ -149,4 +150,10 @@
 .share {
   position: relative;
   top: -2px;
+}
+
+.ts-top {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
 }
