@@ -12,6 +12,8 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
 
+import { QRCodeModule } from 'angularx-qrcode';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     }),
     TableModule,
     ButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    QRCodeModule,  // Import QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

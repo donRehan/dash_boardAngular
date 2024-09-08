@@ -2,9 +2,14 @@
 
 :root {
   --lighttext-color: #ABAAB1;
-  --accent-color: #8A74F9;
+  --accent-color: rgba(138, 116, 249, 1);
   --background-color-custom: #f2f5f6;
   --chart-background-color: #FFF;
   --font-family-arabic: 'Neo Sans Arabic';
   --font-family-english: Inter;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
 }

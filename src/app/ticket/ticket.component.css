@@ -1,10 +1,20 @@
 .ticket {
   flex: 1;
-  background-color: #a96edb;
+  background-color: rgba(138, 116, 249, 1);
+  background-image: url(../../assets/image.png);
   border-radius: 10px;
-  padding: 20px;
+  padding: 0px;
   color: white;
-  font-family: Arial, sans-serif;
+  background-attachment: fixed; /* Keeps the image fixed in place */
+  background-size: cover; /* Ensures the image covers the entire element without stretching */
+  background-position: center; /* Centers the image */
+}
+
+.ticket:lang(ar){
+  font-family: var(--font-family-arabic);
+}
+.ticket:lang(en){
+  font-family: var(--font-family-english);
 }
 
 .top-section {
@@ -15,32 +25,37 @@
 }
 
 .middle-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .half-circle {
-  width: 20px;
-  height: 20px;
-  background-color: white;
+  position: absolute;
+  width: 24px;
+  height: 27.08px;
+  background-color: var(--background-color-custom);
   border-radius: 50%;
 }
 
 .half-circle.left {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
 .half-circle.right {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 .dashes {
   flex-grow: 1;
-  border-top: 1px dashed white;
   margin: 0 10px;
 }
 .delete-btn button {
@@ -77,21 +92,22 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
 }
 
-.qr-code img {
-  width: 70px;
-  height: 70px;
+.qr-code {
+  width: 82px;
+  height: 82px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .discount {
-  text-align: center;
-}
-
-.discount span {
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .share-btn button {
@@ -100,6 +116,37 @@
   color: white;
   cursor: pointer;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 14px;
+}
+
+.tright-section {
+  display: flex;
+  gap: 24px;
+  min-width: 150px;
+}
+
+.khasm {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.tfive {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.share-btn {
+  display: flex;
+}
+
+.btn {
+  align-self: flex-end;
+  display: flex;
+  gap: 4px;
+}
+
+.share {
+  position: relative;
+  top: -2px;
 }

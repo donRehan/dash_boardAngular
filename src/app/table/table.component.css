@@ -1,3 +1,7 @@
+p-table {
+  padding: 10px;
+}
+
 .rtl-table {
     width: 100%;
     font-family: var(--font-family-arabic);

@@ -1,3 +1,5 @@
+[_] Font in ticket , english doesn't have the english font applied to them
+[_] Drop shadow from the chart table
 [_] Loading the images should be easy , just download them and access them
     from their path in the json file
 [_] Table add a box with color around the right most svg icon

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./ticket.component.css']
 })
 export class TicketComponent {
-
+  public ytlink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 }
