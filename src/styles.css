@@ -7,6 +7,9 @@
   --chart-background-color: #FFF;
   --font-family-arabic: 'Neo Sans Arabic';
   --font-family-english: Inter;
+  background-color: var(--background-color-custom);
+  padding-right: 150px;
+  padding-left: 33px;
 }
 
 body {
