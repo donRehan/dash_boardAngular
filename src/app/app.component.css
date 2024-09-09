@@ -42,6 +42,8 @@ div {
 	min-width: 270px;
 	min-height: 400px;
   background-color: var(--chart-background-color);
+  padding-top: 24px;
+  padding-right: 8px;
 }
 
 .chart-container {
