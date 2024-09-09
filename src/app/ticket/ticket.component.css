@@ -59,6 +59,11 @@
   flex-grow: 1;
   margin: 0 10px;
 }
+
+.delete-btn {
+  flex: 1;
+}
+
 .delete-btn button {
   background: none;
   border: none;
@@ -68,18 +73,22 @@
 }
 
 .ticket-details {
-  text-align: right;
+  text-align: center;
 }
 
-.ticket-details input {
-  background-color: #e8e5f1;
+.inputPlace {
+  background-color: rgba(255, 255, 255, 1);
   border: none;
   padding: 5px;
-  width: 300px;
+  min-width: 180px;
   color: black;
   margin-top: 5px;
   font-size: 14px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  font-family: var(--font-family-english);
 }
 
 .ticket-details p {
@@ -95,6 +104,9 @@
   margin-top: 10px;
   padding: 10px;
   flex-wrap: wrap;
+  padding-right: 26px;
+  padding-left: 26px;
+  padding-bottom: 20px;
 }
 
 .qr-code {
@@ -155,5 +167,13 @@
 .ts-top {
   display: flex;
   flex-direction: row;
-  width: 100px;
+  width: 100%;
+  padding-right: 26px;
+  padding-left: 8px;
+  padding-top: 26px;
+}
+
+.ticketHeader {
+  flex: 4;
+  padding-right: 26px;
 }
